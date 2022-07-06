@@ -55,13 +55,13 @@ const sneakersList = [
     },
     {
         "id": 10,
-        "image": "../img/sneakers/10.jpg",
+        "image": "../img/sneakers/10.png",
         "title": "Мужские Кроссовки Nike Blazer Mid Suede",
         "price": "2999 грн."
     },
     {
         "id": 11,
-        "image": "../img/sneakers/11.jpg",
+        "image": "../img/sneakers/11.png",
         "title": "Кроссовки Puma X Aka Boku Future Rider",
         "price": "2999 грн."
     },
