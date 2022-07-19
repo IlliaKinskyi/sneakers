@@ -19,7 +19,6 @@ const Drawer = () => {
           <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
         </div>
 
-
         </div>
 
         <div className="cartTotalBlock">

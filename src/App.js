@@ -24,18 +24,13 @@ function App() {
         </div>
 
         <div className="d-flex">
-        <Card item={sneakersList[0]}/>
-        <Card item={sneakersList[1]}/>
-        <Card item={sneakersList[2]}/>
-        <Card item={sneakersList[3]}/>
-        <Card item={sneakersList[4]}/>
-        <Card item={sneakersList[5]}/>
-        <Card item={sneakersList[6]}/>
-        <Card item={sneakersList[7]}/>
-        <Card item={sneakersList[8]}/>
-        <Card item={sneakersList[9]}/>
-        <Card item={sneakersList[10]}/>
-        <Card item={sneakersList[11]}/>
+          {sneakersList.map((obj) => (
+            <Card 
+              title={obj.title} 
+              price={obj.price} 
+              image={obj.image}
+            />
+            ))}
         </div>
 
        </div>
