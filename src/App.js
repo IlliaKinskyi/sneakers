@@ -29,6 +29,7 @@ function App() {
               title={obj.title} 
               price={obj.price} 
               image={obj.image}
+              key={obj.id}
             />
             ))}
         </div>
