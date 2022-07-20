@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Drawer = () => {
+const Drawer = (props) => {
     return (
+      
+    <div className="overlay">
         <div className="drawer">
         <h2 className="d-flex justify-between mb-30">
           Корзина
-          <img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove"/>
+          <img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove" onClick={props.onClose}/>
         </h2>
 
         <div className="items">
@@ -36,6 +38,7 @@ const Drawer = () => {
           </ul>
           <button className="greenButton">Оформить заказ <img src="/img/arrow.svg" alt="Arrow"/> </button>
         </div>
+      </div>
       </div>
     );
 };

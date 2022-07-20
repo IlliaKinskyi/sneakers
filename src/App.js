@@ -2,16 +2,16 @@ import Card from "./components/Card";
 import Drawer from "./components/Drawer";
 import Header from "./components/Header";
 import sneakersList from "./sneakersList";
+import React from "react";
 
 function App() {
+  const [cartOpened, setCartOpened] = React.useState(false)
+
   return (
     <div className="wrapper clear">
 
-    <div style={{display: 'none'}} className="overlay">
-      <Drawer/>
-    </div>
-
-      <Header/>
+      {cartOpened && <Drawer onClose={() => setCartOpened(false)}/>}
+      <Header onClickCart={() => setCartOpened(true)}/>
       
        <div className="content p-40">
         <div className="d-flex align-center justify-between mb-40">
@@ -30,6 +30,8 @@ function App() {
               price={obj.price} 
               image={obj.image}
               key={obj.id}
+              onFavorite={() => console.log('Click Favorite')}
+              onPlus={() => console.log('Click Plus')}
             />
             ))}
         </div>
