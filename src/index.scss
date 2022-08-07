@@ -79,6 +79,11 @@ header {
   display: flex;
   flex-direction: column;
 
+  .cart-empty {
+    position: relative;
+    width: 285px;
+  }
+
   .items {
     flex: 1;
     overflow: auto;

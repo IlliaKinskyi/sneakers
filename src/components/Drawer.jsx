@@ -10,7 +10,15 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
           <img className="removeBtn cu-p" src="/img/btn-remove.svg" alt="Remove" onClick={onClose}/>
         </h2>
 
+        <div className="cart-empty">
+          <img src="/img/cart-empty.svg" alt="Cart Empty" />
+          <h3>Корзина пуста</h3>
+          <p >Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</p>
+          <button className="greenButton" onClick={onClose}><img src="/img/arrow-back.svg" alt="Arrow"/> Вернуться назад</button>
+        </div>
+
         <div className="items">
+          
           
         {items.map((obj) => (
               <div className="cartItem d-flex align-center mb-20" id={obj.id}>
