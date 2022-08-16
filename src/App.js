@@ -6,6 +6,7 @@ import axios from "axios";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import AppContext from "./context";
+import Orders from "./pages/Orders";
 
 function App() {
   const [items, setItems] = React.useState([])
@@ -22,7 +23,6 @@ function App() {
       const itemsResponse = await axios.get('https://62d970bf9eedb699635c3307.mockapi.io/items')
 
       setIsLoading(false)
-
       setCartItems(cartResponse.data)
       setFavorites(favoritesResponse.data)
       setItems(itemsResponse.data)
@@ -70,7 +70,7 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={{ items, cartItems, favorites, isItemAdded, onAddToFavorite, setCartOpened, setCartItems }}>
+    <AppContext.Provider value={{ items, cartItems, favorites, isItemAdded, onAddToFavorite, onAddToCart, setCartOpened, setCartItems }}>
     <div className="wrapper clear">
 
       {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)} onRemove={onRemoveItem}/>}
@@ -88,6 +88,7 @@ function App() {
           isLoading={isLoading}
         />}/>
         <Route path="/favorites" element={<Favorites />}/>
+        <Route path="/orders" element={<Orders />}/>
       </Routes>
       
        
